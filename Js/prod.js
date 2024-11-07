@@ -18,7 +18,7 @@ qtdInput[i].addEventListener("change",updateTotal)
 
 }
 
-const addToCart =document.getElementsByClassName("btn-car")
+const addToCart =document.getElementsByClassName("btn")
 for(var i=0; i< addToCart.length;i++) {
     addToCart[i].addEventListener("click", addProdToCart)
 }

@@ -43,6 +43,11 @@ header {
 #mobile_menu {
     display: none;
 }
+.btn a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
 
 @media screen and (max-width: 1170px) {
     #nav_list,
