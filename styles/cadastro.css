@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-light: #f8fafc;
+    --color-body: #fff9ea;
+}
+
+#container{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-body);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-form{
+background-color: var(--color-light);
+display:flex ;
+flex-direction: column;
+padding: 30px 40px;
+border-radius: 8px;
+gap: 30px;
+box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+height: fit-content;
+
+}
+
+#form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#form-header h1{
+    font-size: 40px;
+    position: relative;
+}
+
+#form-header h1::before{
+   position: absolute;
+   content: '';
+   width: 40%;
+   background-color:#f8d477;
+   height: 3px;
+   bottom: 6px;
+   border-radius: 5px;
+}
+
+#social-media{
+    display: flex;
+    justify-content: space-around;
+}
+
+#social-media img{
+    width: 35px;
+}
+
+#social-media img:hover{
+    transform: scale(1.2);
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.input-box label{
+font-size: 14px;
+color: #000000;
+}
+
+.input-field{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid #f8d477 ;
+}
+
+.input-field i{
+    font-size: 10px;
+    color: #000000;
+}
+.input-field input{
+    border: none;
+    background-color: transparent;
+    width: 260px;
+    font-size: 18px;
+    padding: 0px 5px;
+
+}
+.input-field input:focus{
+   outline: none;
+    
+}
+#forgot-password a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 200;
+    color: #000000;
+}
+
+#forgot-password a:hover{
+    color: #1a67ff;
+}
+
+#login-a a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 200;
+    color: #000000;
+}
+#login-a a:hover{
+    color: #1a67ff;
+}
+
+
+
+#login-btn{
+    border: none;
+    background: rgb(255,249,234);
+background: linear-gradient(90deg, rgba(255,249,234,1) 14%, rgba(248,212,119,1) 85%, rgba(0,212,255,1) 100%);
+    color: white;
+    padding: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#login-btn:hover{
+transform: scale(1.05);
+}
