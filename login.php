@@ -9,7 +9,7 @@
 </head>
 <body>
     <main id="container">
-        <form action="" method="post" id="login-form">
+        <form action="testeLogin.php" method="POST" id="login-form">
             <div id="form-header">
                 <h1>Login</h1>
             </div>
@@ -30,18 +30,6 @@
             </div>
 
             <div id="inputs">
-                <div class="input-box">
-                    <label for="name">
-                        Nome
-                    
-                    <div class="input-field">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                </label>
-                </div>
-
-
                 <div class="input-box">
                     <label for="email">
                         Email
@@ -70,7 +58,7 @@
                         </div>
 
                         <div id="cadastre">
-                            <a href="cadastro.html">
+                            <a href="cadastro.php">
                              Não possui conta? Cadastre-se
                             </a>
 
@@ -79,7 +67,7 @@
                 </div>
 
             </div>
-            <button type="submit" id="login-btn">Login</button>
+            <input type="submit" id="login-btn" name="submit" id="submit">
 
         </form>
     </main>

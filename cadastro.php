@@ -100,7 +100,7 @@ if(isset($_POST['submit'])){
                         </div>
 
                         <div id="login-a">
-                            <a href="login.html">
+                            <a href="login.php">
                              Já possui conta? Faça Login
                             </a>
 
