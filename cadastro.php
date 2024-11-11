@@ -1,3 +1,21 @@
+<?php
+if(isset($_POST['submit'])){
+
+    include_once 'conexao.php';
+  //  print_r($_POST['name']);
+    //print_r($_POST['tel']);
+   // print_r($_POST['email']);
+   // print_r($_POST['password']);
+   $nome= $_POST['name'];
+   $telefone= $_POST['tel'];
+   $email= $_POST['email'];
+   $senha= $_POST['password'];
+
+   $enviar= mysqli_query($conexao, "INSERT INTO USER(nome_user,telefone_user,email_user,senha_user) 
+    VALUES ('$nome','$telefone','$email','$senha')");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,7 +27,7 @@
 </head>
 <body>
     <main id="container">
-        <form action="" method="post" id="login-form">
+        <form action="cadastro.php" method="POST" id="login-form">
             <div id="form-header">
                 <h1>Cadastro</h1>
             </div>
@@ -91,7 +109,7 @@
                 </div>
 
             </div>
-            <button type="submit" id="login-btn">Cadastrar</button>
+            <input type="submit" name="submit" id="login-btn">
 
         </form>
     </main>
