@@ -1,14 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\brito\\source\\repos\\CadastroDeProdutos\\",
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\projeto_asa\\CadastroDeProdutos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F33A0F6E-C5D2-4F33-ADC1-91E4507A7345}|CadastroDeProdutos\\CadastroDeProdutos.csproj|c:\\users\\brito\\source\\repos\\cadastrodeprodutos\\cadastrodeprodutos\\prod_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F33A0F6E-C5D2-4F33-ADC1-91E4507A7345}|CadastroDeProdutos\\CadastroDeProdutos.csproj|c:\\xampp\\htdocs\\projeto_asa\\cadastrodeprodutos\\cadastrodeprodutos\\prod_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F33A0F6E-C5D2-4F33-ADC1-91E4507A7345}|CadastroDeProdutos\\CadastroDeProdutos.csproj|solutionrelative:cadastrodeprodutos\\prod_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F33A0F6E-C5D2-4F33-ADC1-91E4507A7345}|CadastroDeProdutos\\CadastroDeProdutos.csproj|C:\\Users\\brito\\source\\repos\\CadastroDeProdutos\\cadastrodeprodutos\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F33A0F6E-C5D2-4F33-ADC1-91E4507A7345}|CadastroDeProdutos\\CadastroDeProdutos.csproj|solutionrelative:cadastrodeprodutos\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97888AD1-BC3C-440F-A192-FC227FD44653}|Itens de Solu\u00E7\u00E3o{97888AD1-BC3C-440F-A192-FC227FD44653}|C:\\xampp\\htdocs\\projeto_asa\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F33A0F6E-C5D2-4F33-ADC1-91E4507A7345}|CadastroDeProdutos\\CadastroDeProdutos.csproj|C:\\xampp\\htdocs\\projeto_asa\\CadastroDeProdutos\\CadastroDeProdutos\\Produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F33A0F6E-C5D2-4F33-ADC1-91E4507A7345}|CadastroDeProdutos\\CadastroDeProdutos.csproj|solutionrelative:CadastroDeProdutos\\Produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +21,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\projeto_asa\\.gitignore",
+              "RelativeDocumentMoniker": "..\\.gitignore",
+              "ToolTip": "C:\\xampp\\htdocs\\projeto_asa\\.gitignore",
+              "RelativeToolTip": "..\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-13T18:11:33.763Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Prod_repo.cs",
-              "DocumentMoniker": "C:\\Users\\brito\\source\\repos\\CadastroDeProdutos\\CadastroDeProdutos\\Prod_repo.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\projeto_asa\\CadastroDeProdutos\\CadastroDeProdutos\\Prod_repo.cs",
               "RelativeDocumentMoniker": "CadastroDeProdutos\\Prod_repo.cs",
-              "ToolTip": "C:\\Users\\brito\\source\\repos\\CadastroDeProdutos\\CadastroDeProdutos\\Prod_repo.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\projeto_asa\\CadastroDeProdutos\\CadastroDeProdutos\\Prod_repo.cs",
               "RelativeToolTip": "CadastroDeProdutos\\Prod_repo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T19:33:07.527Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Produto.cs",
-              "DocumentMoniker": "C:\\Users\\brito\\source\\repos\\CadastroDeProdutos\\CadastroDeProdutos\\Produto.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\projeto_asa\\CadastroDeProdutos\\CadastroDeProdutos\\Produto.cs",
               "RelativeDocumentMoniker": "CadastroDeProdutos\\Produto.cs",
-              "ToolTip": "C:\\Users\\brito\\source\\repos\\CadastroDeProdutos\\CadastroDeProdutos\\Produto.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\projeto_asa\\CadastroDeProdutos\\CadastroDeProdutos\\Produto.cs",
               "RelativeToolTip": "CadastroDeProdutos\\Produto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T19:29:33.486Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
