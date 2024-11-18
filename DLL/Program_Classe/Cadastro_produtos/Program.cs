@@ -11,10 +11,14 @@ namespace Cadastro_produtos
     {
         static void Main()
         {
-            //Alterar os dados de conexão para os dados do banco de dados final
-            string connectionString = "Server=127.0.0.1;Database=CadastroProdutosDB;User Id=root;Password=;SslMode=none;";
+            Cliente c1 = new Cliente();
 
-            Prod_repo repository = new Prod_repo(connectionString);
+            c1.CadastrarCliente();
+
+            //Alterar os dados de conexão para os dados do banco de dados final
+            string stringconexao = "Server=127.0.0.1;Database=asaP;uid=root;pwd=;port=3306;";
+
+            Prod_repo repository = new Prod_repo(stringconexao);
 
             while (true)
             {
