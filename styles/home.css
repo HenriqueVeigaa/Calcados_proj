@@ -16,6 +16,21 @@
     font-size: 4rem;
     color: var(--color-neutral-1);;
 }
+.shoe-image{
+    height: 200px;
+    width: 200px;
+    }
+
+    .shoes{
+        border-radius: 15px;
+       
+        transition: all 0.3s ease;
+    }
+    .shoes:hover{
+        transform: scale(1.1);
+    }
+
+
 
 #cta .title span {
     color: var(--color-primary-6);
@@ -63,16 +78,7 @@
     width: fit-content;
 }
 
-.shape {
-    background-color: var(--color-primary-2);
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    border-radius: 40% 30% 0% 20%;
-    top: 0;
-    right: 0;
-    z-index: 1;
-}
+
 
 @media screen and (max-width: 1170px) {
     #home {

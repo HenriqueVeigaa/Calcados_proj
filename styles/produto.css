@@ -170,6 +170,14 @@ transition: 0.2s ease;
     cursor: pointer;
     
 }
+.shoes{
+    border-radius: 15px;
+   
+    transition: all 0.3s ease;
+}
+.shoes:hover{
+    transform: scale(1.1);
+}
 
 .btn:hover{
     filter: brightness(0.9);
@@ -187,4 +195,8 @@ transition: 0.2s ease;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: background-color .3s ease;
+}
+.shoe-image{
+height: 200px;
+width: 200px;
 }

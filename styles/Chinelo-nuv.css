@@ -1,9 +1,3 @@
-*{
-    margin: 0;
-    padding:1;
-    box-sizing: border-box ;
-    font-family: 'Kumbh Sens' , sans-serif;
-}
 
 header{
     display: flex;
@@ -21,11 +15,7 @@ li{
 
 }
 
-body{
-    background-color: rgb(255, 250, 202);
-    height: 0px;
-    
-}
+
 
 .menu{
     display: flex ;
@@ -112,7 +102,7 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: -350px;
+    margin-top: -410px;
     margin-left: 440px;
     
 }
@@ -154,6 +144,7 @@ select{
     color:black;
     background-color: rgb(255, 191, 71);
     margin-left: 10px;
+    border-radius: 15px;
     
 }
 
@@ -189,10 +180,6 @@ select{
     font-size: 12px;
     font-weight: 700;
     margin-top: 18px;
-}
-
-select{
-    border-radius: 5px;
 }
 
 .options{

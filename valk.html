@@ -6,43 +6,69 @@
     <title>Item</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="valkk.css">
+    <link rel="stylesheet" href="styles/valkk.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/header.css">
 </head>
 <body>
+  
+
     <header>
-    <div class="menu">
-        
-        <div class="left-side-menu">
-            <div class="logo">
-                <img src="logo-pe.jpg">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Produto</a></li>
-                    <li><a href="">Avaliação</a></li>
-                </ul>
-            </nav>
+        <nav id="navbar">
+            <a href="index.html">
+            <i class="fa-solid fa-shoe-prints" id="nav_logo"> Asa nos Pés</i></a>
 
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="index.html">Início</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="produto.html">Produtos</a>
+                </li>
+            </ul>
+
+           
+
+
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <button class="btn">
+                <a href="produto.html#container car-section">
+                <i class="fa-solid fa-cart-shopping"></i></a>
+            </button>
+
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="produto.html">Produtos</a>
+                </li>
+            </ul>
+
+            <button class="btn">
+                Veja nossos Produtos
+            </button>
         </div>
-       
-        <div class="right-side-menu">
-             <a href="" class=""><img src="icon-cart.svg"></a>
-
-        </div>     
-    
-    </div>
-        <div class="line"></div>
     </header>
-
     <main>
         <section>
             <div class="container">
 
              <div class="left-side">
                   <div class="items">
-                       <div class="select-image"><img src="valk1.jpg"></div>
+                       <div class="select-image"><img src="images/valk1.jpg"></div>
 
                             <div class="tumb">
                                 
@@ -66,15 +92,16 @@
                   <h1>Tempo limitado</h1>
                   <p>ideal para o seu pé</p>
                   <div class="prices">
-                  <span class="=price">R$55,00</span>
-                  <span class="off">R$80,00</span>
+                  <span class="price">R130,99</span>
+                 
                   </div>
-                  <div class="opptios">
+                  <div class="options">
                         <div class="amount">
                                <div class="minus">
                                 <img src="">
                                </div>
                               <label for="op">Cores</label>
+                              <i class="fa-solid fa-palette"></i>
                               <select>
                                 <option value="2">Preto</option>
                                 <option value="1">Bege</option>
@@ -95,7 +122,14 @@
                                </div>
                   
                         </div>
-                    <a href="" class="button"><img src="icon-cart.svg"> Carrinho</a>
+                        <div>
+                        <button class="btn">
+                            
+                    <a href="produto.html#container car-section">
+                      Comprar
+                    </a>
+                </button>
+                </div>
                   </div>
              </div>
              </div>

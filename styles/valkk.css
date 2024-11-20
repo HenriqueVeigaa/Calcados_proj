@@ -1,15 +1,4 @@
-*{
-    margin: 0;
-    padding:1;
-    box-sizing: border-box ;
-    font-family: 'Kumbh Sens' , sans-serif;
-}
 
-header{
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-}
 
 li{
     margin-top: 10%;
@@ -112,7 +101,7 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: -410px;
+    margin-top: -350px;
     margin-left: 440px;
     
 }
@@ -189,6 +178,10 @@ select{
     font-size: 12px;
     font-weight: 700;
     margin-top: 18px;
+}
+
+select{
+    border-radius: 5px;
 }
 
 .options{

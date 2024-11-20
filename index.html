@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
     <link rel="stylesheet" href="styles/styles.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -13,7 +13,8 @@
 <body>
     <header>
         <nav id="navbar">
-            <i class="fa-solid fa-shoe-prints" id="nav_logo"> Asa nos Pés</i>
+            <a href="index.html">
+            <i class="fa-solid fa-shoe-prints" id="nav_logo"> Asa nos Pés</i></a>
 
             <ul id="nav_list">
                 <li class="nav-item active">
@@ -22,18 +23,21 @@
                 <li class="nav-item">
                     <a href="produto.html">Produtos</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#">FAQ</a>
-                </li>
             </ul>
 
-            <button class="btn">
-                Login
-            </button>
+           
+
+
 
             <button id="mobile_btn">
                 <i class="fa-solid fa-bars"></i>
             </button>
+
+            <button class="btn">
+                <a href="produto.html#container car-section">
+                <i class="fa-solid fa-cart-shopping"></i></a>
+            </button>
+
         </nav>
 
         <div id="mobile_menu">
@@ -57,7 +61,7 @@
 
     <main id="content">
         <section id="home">
-            <div class="shape"></div>
+           
             <div id="cta">
                 <h1 class="title">
                     Voe Alto
@@ -110,19 +114,18 @@
 
             <div id="snickers">
                 <div class="shoes">
-                    <div class="shoe-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="images/dish.png" class="shoe-image" alt="">
+                    <a href="produto.html#shickers">
+                    <img src="images/Chinelo1.jpeg" class="shoe-image" alt="">
+                </a>
 
                     <h3 class="shoe-title">
-                        Lorem Ipsum
+                        Chinelo Nuvem
                     </h3>
 
                     <span class="shoe-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        O chinelo ideal para suas caminhadas descontraídas
                     </span>
+
 
                     <div class="shoe-rate">
                         <i class="fa-solid fa-star"></i>
@@ -130,46 +133,12 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
+                        <span>(35+)</span>
                     </div>
 
                     <div class="shoe-price">
-                        <h4>R$20,00</h4>
-                        <button class="btn">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="shoes">
-                    <div class="shoe-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="images/dish2.png" class="shoe-image" alt="">
-
-                    <h3 class="shoe-title">
-                        Lorem Ipsum
-                    </h3>
-
-                    <span class="shoe-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="shoe-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="shoe-price">
-                        <h4>R$20,00</h4>
-                        <button class="btn">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
+                        <h4>R$100,00</h4>
+                    
                     </div>
                 </div>
 
