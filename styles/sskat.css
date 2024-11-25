@@ -18,6 +18,12 @@ body{
 select{
     border-radius: 15px;
 }
+#snickers{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
 
 .menu{
     display: flex ;
@@ -197,4 +203,20 @@ select{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.input-btn{
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    justify-content: center;
+    background-color: #f8d477;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+    min-width: 150px;  /* Largura mínima */
 }

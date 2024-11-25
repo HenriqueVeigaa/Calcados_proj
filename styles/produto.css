@@ -113,8 +113,8 @@ section {
 
 }
 .cart-img{
-    width: 120px;
-    height: 70px;
+    width: 140px;
+    height: 140px;
 }
 .cart-title{
     margin-left: 16px;
@@ -171,6 +171,10 @@ transition: 0.2s ease;
     
 }
 .shoes{
+    width: calc(25% - 20px); /* 4 itens por linha com espaço entre eles */
+    box-sizing: border-box; /* Para garantir que a largura inclua o padding e o gap */
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+
     border-radius: 15px;
    
     transition: all 0.3s ease;

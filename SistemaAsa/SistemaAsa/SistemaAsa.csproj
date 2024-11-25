@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F9F5D33F-3462-4578-B8B7-4BAA9F1BCD1C}</ProjectGuid>
+    <ProjectGuid>{8B48D09C-A6BA-4DA9-8BD8-811BD56A34D6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Cadastro_produtos</RootNamespace>
-    <AssemblyName>Cadastro_produtos</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>SistemaAsa</RootNamespace>
+    <AssemblyName>SistemaAsa</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CadastroDeProdutos">
-      <HintPath>..\..\CadastroDeClasses\CadastroDeProdutos\obj\Debug\CadastroDeProdutos.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data, Version=9.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Windows\MySql.Data.dll</HintPath>
@@ -50,6 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Estoque.cs" />
+    <Compile Include="Fornecedor.cs" />
+    <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

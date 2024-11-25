@@ -44,8 +44,10 @@ function AddProdCart(event){    //função criada para pegar os 3 elementos nece
     for(var i =0; i < ProdCartName.length;i++){                        //verificando se o produto que vamos colocar no carrinho já está nele, para apenas aumentar a qtd de inputs
       if( ProdCartName[i].innerText === ProdNome){
        ProdCartName[i].parentElement.parentElement.getElementsByClassName("qtd-prod")[0].value++ //pegando o elemento pai do prodcartname e atribuindo mais um ao input
-    return //o return faz com que não execute o NewCartProd evitando que o produto seja adicionado novamente, aumentando somente a qtd de inputs
-    }                           
+       updateValor();    
+       return //o return faz com que não execute o NewCartProd evitando que o produto seja adicionado novamente, aumentando somente a qtd de inputs
+   
+}                           
    
 }
 
