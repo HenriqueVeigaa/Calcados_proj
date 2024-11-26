@@ -15,6 +15,7 @@ namespace SistemaAsa
         protected string Modelo {  get; set; }
 
         protected string Solado {  get; set; }
+        protected int Qtd { get; set; }
         protected string Adicionais_prod {  get; set; }
 
         
@@ -34,6 +35,8 @@ namespace SistemaAsa
 
             Console.WriteLine("\nInforme o tipo de solado: ");
             Solado = Console.ReadLine();
+            Console.WriteLine("Informe a quantidade disponivel:");
+            Qtd = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Informe se o produto possuí informações adicionais:");
             Adicionais_prod = Console.ReadLine();
@@ -50,8 +53,8 @@ namespace SistemaAsa
             try
             {
                 
-                string SQL = "INSERT INTO Produto (Id_prod, Nome_prod,tamanho_prod,modelo_prod,solado_prod,adicionais_prod,preco_prod ) " +
-                                    "VALUES (@id_prod, @nome_prod,@tamanho_prod,@modelo_prod,@solado_prod,@prod_adicionais, @preco_prod)";
+                string SQL = "INSERT INTO Produto (Id_prod, Nome_prod,tamanho_prod,modelo_prod,solado_prod,adicionais_prod,qtd_prod,preco_prod ) " +
+                                    "VALUES (@id_prod, @nome_prod,@tamanho_prod,@modelo_prod,@solado_prod,@prod_adicionais,@qtd_prod, @preco_prod)";
 
                 
                 using (MySqlCommand cmd = new MySqlCommand(SQL, conexao))
@@ -62,6 +65,7 @@ namespace SistemaAsa
                     cmd.Parameters.AddWithValue("@modelo_prod", Modelo);
                     cmd.Parameters.AddWithValue("@solado_prod", Solado);
                     cmd.Parameters.AddWithValue("@prod_adicionais", Adicionais_prod);
+                    cmd.Parameters.AddWithValue("@qtd_prod", Qtd);
                     cmd.Parameters.AddWithValue("@preco_prod", Preco);
 
 
@@ -102,6 +106,7 @@ namespace SistemaAsa
                         Console.WriteLine("Modelo do Produto: " + reader["modelo_prod"]);
                         Console.WriteLine("Solado do Produto: " + reader["solado_prod"]);
                         Console.WriteLine("Adicionais: " + reader["adicionais_prod"]);
+                        Console.WriteLine("Quantidade Disponível:" + reader["qtd_prod"]);
                         Console.WriteLine("Preço: " + reader["preco_prod"]);
                     }
                 }

@@ -20,56 +20,21 @@ namespace SistemaAsa
   
         
 
-        public void GetDados()
+        public void GetDadosEstoque()
         {
-            Console.WriteLine("Informe o ID do estoque");
-            Id = int.Parse(Console.ReadLine());
+         
 
             Console.WriteLine("Informe o ID do produto:");
             Id_produto = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Informe o ID do fornecedor:");
-            Id_fornecedor = int.Parse(Console.ReadLine());
+            
 
             Console.WriteLine("\nInforme a quantidade disponível do produto no estoque:");
             Qtd_estoque = int.Parse(Console.ReadLine());
         }
 
         
-        public void AdicionarEstoque(MySqlConnection conexao)
-        {
-            try
-            {
-                
-                string comandoSQL = "INSERT INTO Estoque (id_estoque,prod_id, fornecedor_id, qntd_estoque) VALUES (id_estoque,@prod_id, @fornecedor_id, @qntd_estoque)";
-
-                using (MySqlCommand cmd = new MySqlCommand(comandoSQL, conexao))
-                {
-                    cmd.Parameters.AddWithValue("@id_estoque",Id);
-                    cmd.Parameters.AddWithValue("@prod_id", Id_produto);
-                    cmd.Parameters.AddWithValue("@fornecedor_id", Id_fornecedor);  
-                    cmd.Parameters.AddWithValue("@qntd_estoque", Qtd_estoque);  
-
-                   
-
-                    
-                    int rowsAffected = cmd.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        Console.WriteLine("Novo estoque adicionado com sucesso.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Erro ao adicionar o estoque.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Erro ao adicionar estoque: " + ex.Message);
-            }
-        }
+        
 
         public void AtualizarEstoque(MySqlConnection conexao)
         {

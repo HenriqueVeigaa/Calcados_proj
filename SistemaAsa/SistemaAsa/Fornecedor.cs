@@ -27,7 +27,9 @@ namespace SistemaAsa
             Nome_for = Console.ReadLine();
             Console.WriteLine("Informe o telefone de contato do fornecedor:");
             Telefone_for = Console.ReadLine();
-            Console.WriteLine("Informe o CNPJ");
+            Console.WriteLine("Informe o email do fornecedor:");
+            Email_comercial = Console.ReadLine();
+            Console.WriteLine("Informe o CNPJ\n\n");
             CNPJ = Console.ReadLine();
         }
         public void AdicionarFornecedor (MySqlConnection conexao)
@@ -35,7 +37,7 @@ namespace SistemaAsa
             try
             {
 
-                string SQL = "INSERT INTO Fornecedor (Id_fornecedor, Nome_fornecedor,telefone_comercial,email_suporte,cnpj, ) " +
+                string SQL = "INSERT INTO Fornecedor (id_fornecedor,nome_fornecedor,telefone_comercial,email_suporte,cnpj) " +
                                     "VALUES (@id_fornecedor,@nome_fornecedor,@telefone_comercial,@email_suporte,@cnpj)";
 
 
@@ -43,19 +45,19 @@ namespace SistemaAsa
                 {
                     cmd.Parameters.AddWithValue("@id_fornecedor", ID);
                     cmd.Parameters.AddWithValue("@nome_fornecedor",Nome_for);
-                    cmd.Parameters.AddWithValue("@telefone_ccomercial", Telefone_for);
+                    cmd.Parameters.AddWithValue("@telefone_comercial", Telefone_for);
                     cmd.Parameters.AddWithValue("@email_suporte",Email_comercial);
                     cmd.Parameters.AddWithValue("@cnpj", CNPJ);
                 
 
 
                     cmd.ExecuteNonQuery();
-                    Console.WriteLine("Fornecedor adicionado com sucesso.");
+                    Console.WriteLine("Fornecedor adicionado com sucesso.\n");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao adicionar fornecedor: " + ex.Message);
+                Console.WriteLine("Erro ao adicionar fornecedor: \n" + ex.Message);
             }
 
             
@@ -67,13 +69,13 @@ namespace SistemaAsa
                 string sql = "SELECT * FROM Fornecedor";
                 MySqlCommand cmd = new MySqlCommand(sql, conexao);
 
-                Console.WriteLine("Consultando fornecedores...");
+                Console.WriteLine("Consultando fornecedores...\n");
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
                     if (!reader.HasRows)
                     {
-                        Console.WriteLine("Nenhum fornecedor encontrado.");
+                        Console.WriteLine("Nenhum fornecedor encontrado.\n");
                         return;
                     }
 
@@ -110,17 +112,17 @@ namespace SistemaAsa
 
                     if (rowsAffected > 0)
                     {
-                        Console.WriteLine("Forneceodor removido com sucesso.");
+                        Console.WriteLine("Forneceodor removido com sucesso.\n");
                     }
                     else
                     {
-                        Console.WriteLine("Nenhum fornecedor encontrado com o ID fornecido.");
+                        Console.WriteLine("Nenhum fornecedor encontrado com o ID fornecido.\n");
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao deletar fornecedor: " + ex.Message);
+                Console.WriteLine("Erro ao deletar fornecedor\n: " + ex.Message);
             }
         }
         public void AtualizarFornecedor(MySqlConnection conexao)
@@ -162,17 +164,17 @@ namespace SistemaAsa
 
                     if (rowsAffected > 0)
                     {
-                        Console.WriteLine("Fornecedor atualizado com sucesso.");
+                        Console.WriteLine("Fornecedor atualizado com sucesso.\n");
                     }
                     else
                     {
-                        Console.WriteLine("Nenhum fornecedor encontrado com o ID fornecido.");
+                        Console.WriteLine("Nenhum fornecedor encontrado com o ID fornecido.\n");
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao atualizar fornecedor: " + ex.Message);
+                Console.WriteLine("Erro ao atualizar fornecedor: \n" + ex.Message);
             }
         
     }
