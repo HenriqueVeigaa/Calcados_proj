@@ -173,10 +173,14 @@ transition: 0.2s ease;
     cursor: pointer;
     
 }
+#snickers{
+    flex-wrap: wrap;
+    display: flex;
+}
 .shoes{
-    width: calc(25% - 20px); /* 4 itens por linha com espaço entre eles */
-    box-sizing: border-box; /* Para garantir que a largura inclua o padding e o gap */
-    margin-bottom: 20px; /* Espaçamento entre as linhas */
+    width: calc(25% - 20px); 
+    box-sizing: border-box; 
+    margin-bottom: 20px; 
 
     border-radius: 15px;
    

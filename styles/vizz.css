@@ -1,18 +1,5 @@
-*{
-    margin: 0;
-    padding:1;
-    box-sizing: border-box ;
-    font-family: 'Kumbh Sens' , sans-serif;
-}
-
-header{
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-}
-
-li{
-    margin-top: 10%;
+select{
+    border-radius: 15px;
 }
 
 .logo img{

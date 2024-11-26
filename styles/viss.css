@@ -1,15 +1,7 @@
-*{
-    margin: 0;
-    padding:1;
-    box-sizing: border-box ;
-    font-family: 'Kumbh Sens' , sans-serif;
+select{
+    border-radius: 15px;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-}
 
 li{
     margin-top: 10%;
@@ -21,11 +13,7 @@ li{
 
 }
 
-body{
-    background-color: rgb(255, 250, 202);
-    height: 0px;
-    
-}
+
 
 .menu{
     display: flex ;
@@ -106,17 +94,13 @@ nav ul li a{
     
 }
 
-select{
-    border-radius: 5px;
-}
-
 .right-side{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: -290px;
+    margin-top: -410px;
     margin-left: 440px;
     
 }

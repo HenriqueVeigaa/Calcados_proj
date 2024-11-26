@@ -47,7 +47,7 @@ ScrollReveal().reveal('.shoe',{
     
     });
 
-    ScrollReveal().reveal('#testimonial-shoe',{
+    ScrollReveal().reveal('#snickers',{
         origin: 'left',
         duration :2000,
         distance:'20%'
