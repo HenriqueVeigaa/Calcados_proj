@@ -1,216 +1,219 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Security.Cryptography;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+using Mysqlx.Connection;
 
 namespace SistemaAsa
 {
-    internal class Funcionario
+    internal class Cliente
     {
-        public int ID_func { get; set; }
-        protected string Nome_func { get; set; }
+
+        protected string nome_cli { get; set; }
         protected string CPF { get; set; }
-        protected string Email_func { get; set; }
-        protected string Senha_func { get; set; }
 
-        protected string cargo_func { get; set; }
+        protected string email_pessoal { get; set; }
 
-        public void GetDados()
+        protected string senha_cli { get; set; }
+        protected int IdPed {  get; set; }
+
+        protected string RG { get; set; }
+
+        protected int ID { get; set; }
+        protected int ProdID {  get; set; }
+        protected string metodopagamento {  get; set; }
+       
+
+        public void GetDadosCli()
         {
-            Console.WriteLine("Informe o ID do funcionario:");
-            ID_func = int.Parse(Console.ReadLine());
-            Console.WriteLine("\nInforme o nome do funcionario:");
-            Nome_func = Console.ReadLine();
-            Console.WriteLine("\nInforme o CPF do funcionario:");
+
+            Console.WriteLine("\nInforme seu Nome:");
+            nome_cli = Console.ReadLine();
+            Console.WriteLine("Informe seu CPF:");
             CPF = Console.ReadLine();
-            Console.WriteLine("Informe o cargo:");
-            cargo_func = Console.ReadLine();
-            Console.WriteLine("\nInforme o email do funcionario:");
-            Email_func = Console.ReadLine();
-            Console.WriteLine("\nPor fim, informe a senha do funcionario:");
-            Senha_func = Console.ReadLine();
+            Console.WriteLine("Informe seu email pessoal:");
+            email_pessoal = Console.ReadLine();
+            Console.WriteLine("Informe a senha:");
+            senha_cli = Console.ReadLine();
+            Console.WriteLine("Informe seu RG:");
+            RG = Console.ReadLine();
+
         }
-
-
-
-        public void AdicionarFuncionario(MySqlConnection conexao)
+        public void AdicionarCliente(MySqlConnection conexao)
         {
             try
             {
-                // Definindo o comando SQL
-                string comandoSQL = "INSERT INTO funcionario(id_funcionario, nome_funcionario,cpf,cargo_funcionario,email_comercial, senha_funcionario) " +
-                                    "VALUES (@id_funcionario, @nome_funcionario,@cpf,@cargo_funcionario, @email_comercial, @senha_funcionario)";
 
-                // Criando o comando
-                using (MySqlCommand cmd = new MySqlCommand(comandoSQL, conexao))
+
+                string sql = "INSERT INTO cliente(nome_cliente,cpf,email_pessoal,senha_cliente,RG)" +
+                    "VALUES(@nome_cliente,@cpf,@email_pessoal,@senha_cliente,@RG)";
+
+                using (MySqlCommand cmd = new MySqlCommand(sql, conexao))
                 {
-                    // Adicionando parâmetros
-                    cmd.Parameters.AddWithValue("@id_funcionario", ID_func);
-                    cmd.Parameters.AddWithValue("@nome_funcionario", Nome_func);
-                    cmd.Parameters.AddWithValue("@cpf", CPF);
-                    cmd.Parameters.AddWithValue("@cargo_funcionario", cargo_func);
-                    cmd.Parameters.AddWithValue("@email_comercial", Email_func);
-                    cmd.Parameters.AddWithValue("@senha_funcionario", Senha_func);
+                    cmd.Parameters.AddWithValue("@nome_cliente", nome_cli);
+                    cmd.Parameters.AddWithValue("@cpf",CPF);
+                    cmd.Parameters.AddWithValue("@email_pessoal", email_pessoal);
+                    cmd.Parameters.AddWithValue("@senha_cliente", senha_cli);
+                    cmd.Parameters.AddWithValue("@RG",RG);
 
-                    // Executando o comando
+
+
                     cmd.ExecuteNonQuery();
-                    Console.WriteLine("Cliente adicionado com sucesso.");
+                    Console.WriteLine("Cliente adicionado com sucesso.\n");
                 }
+
+
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao adicionar cliente: " + ex.Message);
+                Console.WriteLine("Erro ao adicionar cliente!" + ex.Message);
             }
+
+
+
         }
-
-        public void ListarFuncionario(MySqlConnection conexao)
-        {
-
-
-          try
-                {
-   
-
-    
-    string sql = "SELECT * FROM FUNCIONARIO";
-    MySqlCommand cmd = new MySqlCommand(sql, conexao);
-    
-    Console.WriteLine("Executando consulta...");
-    
-    
-    MySqlDataReader reader = cmd.ExecuteReader();
-
-   
-    while (reader.Read())
-    {
-                    
-       
-        Console.WriteLine("\n\nID: " + reader["id_funcionario"]);
-        Console.WriteLine("Nome: " + reader["nome_funcionario"]);
-        Console.WriteLine("CPF: " + reader["cpf"]);
-        Console.WriteLine("Cargo :" + reader["cargo_funcionario"]);
-        Console.WriteLine("Email: " + reader["email_comercial"]);
-
-
-    }
-                if (!reader.HasRows) {
-                    Console.WriteLine("Nenhum funcionario encontrado");
-                }
-
-                reader.Close(); // Fechar o reader após a leitura
-}
-catch (Exception ex)
-{
-    Console.WriteLine("Erro ao buscar dados: " + ex.Message);
-}
-finally
-{
-   
-        conexao.Close();
-        
-    }
-}
-
-        public void DeletarFuncionario(MySqlConnection conexao)
+        public void ListarCliente(MySqlConnection conexao)
         {
             try
             {
-                Console.WriteLine("Digite o ID do funcionario a ser removido:");
-                ID_func = int.Parse(Console.ReadLine()); 
-                string sql = "DELETE FROM FUNCIONARIO WHERE id_funcionario=@id_funcionario";
-                using (MySqlCommand cmd = new MySqlCommand(sql, conexao))
+
+
+
+                string sql = "SELECT * FROM cliente";
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+                Console.WriteLine("Executando consulta...");
+
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
                 {
-                    
-                    
-                    cmd.Parameters.AddWithValue("@id_funcionario",ID_func);
 
-                    int rowsAffected = cmd.ExecuteNonQuery();
 
-                    
-                    if (rowsAffected > 0)
-                    {
-                        Console.WriteLine("Funcionário removido com sucesso.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Nenhum funcionário encontrado com o ID especificado.");
-                    }
+                    Console.WriteLine("\n\nID: " + reader["id_cliente"]);
+                    Console.WriteLine("Nome: " + reader["nome_cliente"]);
+                    Console.WriteLine("CPF: " + reader["cpf"]);
+                    Console.WriteLine("Email :" + reader["email_pessoal"]);
+                    Console.WriteLine("Senha: " + reader["senha_cliente"]);
+                    Console.WriteLine("RG " + reader["RG"]);
+
+
                 }
-            
+                if (!reader.HasRows)
+                {
+                    Console.WriteLine("Nenhum cliente encontrado\n");
+                }
+
+                reader.Close();
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Erro:"+ex.Message);
+                Console.WriteLine("Erro ao buscar dados: " + ex.Message);
+            }
+            finally
+            {
+
+                conexao.Close();
+
             }
         }
 
-        public void AtualizarFuncionario(MySqlConnection conexao)
+        public void GetDadosPed()
         {
+            Console.WriteLine("\nDigite o ID do pedido:");
+            IdPed = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nDigite o ID do cliente:");
+             ID = int.Parse(Console.ReadLine());
+            Console.WriteLine("\nDigite o ID do produto a ser comprado:");
+            ProdID = int.Parse(Console.ReadLine());
+            Console.WriteLine("\nInforme o metodo de pagamento:");
+            metodopagamento = Console.ReadLine();
+        }
+
+        public void FazerPedido(MySqlConnection conexao)
+        {
+
             try
             {
-                Console.Write("Digite o ID do funcionario que deseja atualizar: ");
-                ID_func = int.Parse(Console.ReadLine());
-
-                Console.Write("Digite o nome do funcionário: ");
-                string Nome_func = Console.ReadLine();
-
-                Console.Write("Digite o CPF do funcionário: ");
-                string CPF = Console.ReadLine();
-
-                Console.Write("Digite o e-mail do funcionário: ");
-                string Email_func = Console.ReadLine();
-
-                Console.Write("Digite o cargo do funcionário: ");
-                string cargo_func = Console.ReadLine();
-
-                Console.Write("Digite a senha do funcionário: ");
-                string Senha_func = Console.ReadLine();
 
 
+                string sql = "INSERT INTO pedido(id_pedido,cliente_id,produto_id,metodo_pagamento)" +
+                    "VALUES(@id_pedido,@cliente_id,@produto_id,@metodo_pagamento)";
 
-
-
-
-
-                string sql = "UPDATE funcionario SET Nome_funcionario = @nome_funcionario, cpf = @cpf, email_comercial= @email_comercial, cargo_funcionario= @cargo_funcionario, senha_funcionario=@senha_funcionario WHERE Id_funcionario = @id_funcionario";
                 using (MySqlCommand cmd = new MySqlCommand(sql, conexao))
                 {
-                    cmd.Parameters.AddWithValue("@id_funcionario", ID_func);
-                    cmd.Parameters.AddWithValue("@nome_funcionario",Nome_func);
-                    cmd.Parameters.AddWithValue("cpf", CPF);
-                    cmd.Parameters.AddWithValue("@email_comercial", Email_func);
-                    cmd.Parameters.AddWithValue("@cargo_funcionario", cargo_func);
-                    cmd.Parameters.AddWithValue("@senha_funcionario", Senha_func);
+                    cmd.Parameters.AddWithValue("@id_pedido", IdPed);
+                    cmd.Parameters.AddWithValue("@cliente_id", ID);
+                    cmd.Parameters.AddWithValue("@produto_id", ProdID);
+                    cmd.Parameters.AddWithValue("@metodo_pagamento", metodopagamento);
 
-                    int rowsAffected = cmd.ExecuteNonQuery();
 
-                    if (rowsAffected > 0)
-                    {
-                        Console.WriteLine("Dados do funcionário atualizados com sucesso.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Nenhum funcionário encontrado com o ID fornecido.");
-                    }
+
+                    cmd.ExecuteNonQuery();
+                    Console.WriteLine("Pedido feito com sucesso.\n");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao fazer o pedido!" + ex.Message);
+            }
+
+        }
+        public void ListarPedidos(MySqlConnection conexao) {
+
+            try
+            {
+
+
+
+                string sql = "SELECT * FROM pedido";
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+                Console.WriteLine("Executando consulta...");
+
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+
+
+                    Console.WriteLine("\n\nID Pedido: " + reader["id_pedido"]);
+                    Console.WriteLine("ID Cliente: " + reader["cliente_id"]);
+                    Console.WriteLine("ID Produto: " + reader["produto_id"]);
+                    Console.WriteLine("Método de Pagamento:: " + reader["metodo_pagamento"]);
+                   
 
 
                 }
+                if (!reader.HasRows)
+                {
+                    Console.WriteLine("Nenhum pedido encontrado\n");
+                }
+
+                reader.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Erro:"+ex.Message);
+                Console.WriteLine("Erro ao buscar dados: " + ex.Message);
+            }
+            finally
+            {
+
+                conexao.Close();
+
             }
         }
 
-        }
     }
-
-
-
-
-
-
-
-
-
-
+    }
+    
 

@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
-    <Compile Include="Estoque.cs" />
+    <Compile Include="Funcionario.cs" />
     <Compile Include="Fornecedor.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />

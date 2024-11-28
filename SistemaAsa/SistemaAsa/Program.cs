@@ -17,29 +17,29 @@ namespace SistemaAsa
            
             MySqlConnection conexao = new MySqlConnection(stringConexao);
 
-            // Instanciando a classe Cliente
+            
             Funcionario f1 = new Funcionario();
             Produto p1 = new Produto();
-            Estoque e1 = new Estoque();
+            Cliente c1 = new Cliente();
             Fornecedor forn = new Fornecedor();
             bool continuar = true;
             while (continuar)
             {
                 try
                 {
-                    // Abrindo a conexão
+                   
                     conexao.Open();
 
 
                     
-                    Console.WriteLine("---Bem-Vindo---\n\nO que deseja acessar?\n1-Tela de Funcionario\n2-Tela de Produtos\n3-Tela de Estoque\n4-Tela de Fornecedores\n5-Tela de Pedidos\nQ-Sair do Sistema");
+                    Console.WriteLine("--- Seja Bem-Vindo ao Sistema de Gerenciamento Asa nos Pés---\n\n\nO que deseja gerenciar?\n\n1-Gerenciar Funcionários\n2-Gerenciar Produtos\n3-Gerenciar Clientes\n4-Gerenciar Fornecedores\nQ-Sair do Sistema");
 
                     string op1 = Console.ReadLine();
 
                     switch (op1)
                     {
                         case "1":
-                            Console.WriteLine("O que deseja fazer?\n1-Cadastrar Funcionarios\n2-Listar Funcionarios\n3-Demitir Funcionarios\n4-Atualizar dados");
+                            Console.WriteLine("O que deseja fazer?\n\n1-Cadastrar Funcionários\n2-Listar Funcionários\n3-Demitir Funcionários\n4-Atualizar dados");
                             int op2 = int.Parse(Console.ReadLine());
 
                             if (op2 == 1)
@@ -60,7 +60,7 @@ namespace SistemaAsa
                                 f1.AtualizarFuncionario(conexao);
                             }
                             break;
-                        case "2": Console.WriteLine("O que deseja fazer?\n1-Cadastrar Produtos\n2-Listar Produtos Disponiveis\n3-Deletar Produtos\n4-Atualizar dados");
+                        case "2": Console.WriteLine("O que deseja fazer?\n\n1-Cadastrar Produtos\n2-Listar Produtos Disponíveis\n3-Deletar Produtos\n4-Atualizar dados");
                             int op3 = int.Parse(Console.ReadLine());
                             if (op3 == 1)
                             {
@@ -83,30 +83,32 @@ namespace SistemaAsa
                             break;
 
                         case "3":
-                            Console.WriteLine("O que deseja fazer?1-Atualizar estoque\n2-Listar o estoque\n3-Deletar produtos do estoque");
+                            Console.WriteLine("O que deseja fazer?\n\n1-Adicionar Clientes\n2-Listar Clientes\n3-Fazer Pedidos\n4-Listar Pedidos");
                             int op4 = int.Parse(Console.ReadLine());
                             if(op4 == 1)
                             {
-                                e1.GetDadosEstoque();
-                                e1.AtualizarEstoque(conexao);
+                                c1.GetDadosCli();
+                                c1.AdicionarCliente(conexao);
                             }
                             if(op4 == 2)
                             {
-                                e1.ListarEstoque(conexao);
+                                c1.ListarCliente(conexao);  
                             }
                             if(op4 == 3)
                             {
-                                e1.RemoverEstoque(conexao);
+                                c1.GetDadosPed();
+                                c1.FazerPedido(conexao);
                             }
-                            if(op4 == 4)
+                            if (op4 == 4)
                             {
-                                e1.AtualizarEstoque(conexao);
+                                c1.ListarPedidos(conexao);
                             }
+                    
 
                             break;
 
                         case "4":
-                            Console.WriteLine("O que deseja fazer?\n1-Adicionar Fornecedores\n2-Listar Fornecedores\n3-Remover Fornecedores\n4-Atualizar dados dos fornecedores");
+                            Console.WriteLine("O que deseja fazer?\n\n1-Adicionar Fornecedores\n2-Listar Fornecedores\n3-Remover Fornecedores\n4 -Atualizar dados dos fornecedores");
                             int op5 = int.Parse(Console.ReadLine());
                             if(op5 == 1)
                             {
@@ -142,6 +144,7 @@ namespace SistemaAsa
                            
                         default: 
                             Console.WriteLine("Opção Invalida!! Insira outra opção");
+                           
                             break;
                     }
                 }
@@ -178,6 +181,7 @@ namespace SistemaAsa
                     Console.WriteLine(n);
                 }
                 Console.WriteLine("*------------------------------*");
+                Console.WriteLine("Aperte qualquer tecla para continuar");
 
                 Console.ReadKey();
             }
